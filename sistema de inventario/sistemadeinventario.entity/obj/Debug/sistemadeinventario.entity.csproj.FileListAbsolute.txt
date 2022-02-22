@@ -1,0 +1,6 @@
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.entity\bin\Debug\sistemadeinventario.entity.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.entity\bin\Debug\sistemadeinventario.entity.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.entity\obj\Debug\sistemadeinventario.entity.csprojAssemblyReference.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.entity\obj\Debug\sistemadeinventario.entity.csproj.CoreCompileInputs.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.entity\obj\Debug\sistemadeinventario.entity.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.entity\obj\Debug\sistemadeinventario.entity.pdb

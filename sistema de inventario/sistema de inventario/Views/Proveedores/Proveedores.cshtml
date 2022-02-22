@@ -1,0 +1,200 @@
+﻿@model modelList
+@using sistema_de_inventario.Models;
+@{
+    ViewBag.Title = "Proveedores";
+}
+<br /><br /><br />
+
+<div class="panel panel-info">
+
+    <div class="panel-heading">
+        <label><b><span id="lblinicial"></span></b></label>
+
+        <button type="button" class="btn btn-danger btn-sm" style="float:right;" id="cerrarModulo"><i class="fa fa-window-close"></i></button>
+
+    </div>
+
+    <div class="panel-body">
+
+        <div id="divlistaproveedores">
+
+
+
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-info btn-sm" style="float:right;" id="newproveedor"><i class="fa fa-plus-square"></i> Nuevo</button>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <hr />
+                <div class="col-md-12">
+
+                    <table class="table table-condensed table-bordered table-hover dt-reponsive tablas">
+                        <thead>
+                            <tr>
+                                <th>RUC</th>
+                                <th>RAZON SOCIAL</th>
+                                <th>EMAIL</th>
+                                <th>TELEFONO</th>
+                                <th>DIRECCION</th>
+                                <th>OPCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.listaProveedores)
+                            {
+                                <tr>
+                                    <td>@item.ruc</td>
+                                    <td>@item.razonsocial</td>
+                                    <td>@item.email</td>
+                                    <td>@item.telefono</td>
+                                    <td>@item.direccion</td>
+
+                                    @if (item.status == 0)
+                                    {
+                                        <td>
+                                            <span style="background: #ff0000; color: #fff">Desactivado</span>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-success btn-sm btnactivar" Activar="@item.idprov"><i class="fa fa-check"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm btneliminar" Eliminar="@item.idprov"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    }
+                                    else if (item.status == 1)
+                                    {
+                                        <td>
+                                            <span style="background: #00631a; color: #fff">Activado</span>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-sm btndesactivar" Desactivar="@item.idprov"><i class="fa fa-times"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm btneditar" editar="@item.idprov"><i class="fa fa-pencil"></i></button>
+                                        </td>
+                                    }
+
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="divnewproveedor">
+            <div class="col-md-12">
+
+                <div class="col-md-4 ">
+                    <span><label><b>Ruc:</b></label></span>
+                    <input type="text" class="form-control" id="txtpruc" placeholder="Ingrese el Ruc" required onkeypress="return solonumeros(event)" maxlength="13" />
+                    <span id="msjruc"></span>
+                </div>
+
+                <div class="col-md-8">
+                    <span><label><b>RAZON SOCIAL:</b></label></span>
+                    <input type="text" class="form-control" id="txtprazonsocial" placeholder="Ingrese laRazon social" required />
+                    <span id="msjrazonsocial"></span>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4 ">
+                    <span><label><b>Telefono:</b></label></span>
+                    <input type="text" class="form-control" id="txtptelefono" placeholder="Ingrese el Telefono" required onkeypress="return solonumeros(event)" maxlength="10" />
+                    <span id="msjtelefono"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <span><label><b>Email:</b></label></span>
+                    <input type="text" class="form-control" id="txtpemail" placeholder="Ingrese el correo" required />
+                    <span id="msjemail"></span>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-8 ">
+                    <span><label><b>Direccion:</b></label></span>
+                    <input type="text" class="form-control" id="txtpdireccion" placeholder="Ingrese la direccion" required />
+                    <span id="msjdireccion"></span>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-success " id="btnregistrar"> <i class=" fa fa-floppy-o"></i> Registrar</button>
+                    <button type="button" class="btn btn-danger" id="btnvolver"> <i class=" fa fa-reply"></i> Volver</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="diveditproveedor">
+            <div class="col-md-12">
+                <input type="text" class="form-control"  id="idprov" hidden/>
+
+                <div class="col-md-4 ">
+                    <span><label><b>Ruc:</b></label></span>
+                    <input type="text" class="form-control" id="txteditpruc" placeholder="Ingrese el Ruc" required onkeypress="return solonumeros(event)" maxlength="13" />
+                    <span id="msjeditruc"></span>
+                </div>
+
+                <div class="col-md-8">
+                    <span><label><b>RAZON SOCIAL:</b></label></span>
+                    <input type="text" class="form-control" id="txteditprazonsocial" placeholder="Ingrese laRazon social" required />
+                    <span id="msjeditrazonsocial"></span>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4 ">
+                    <span><label><b>Telefono:</b></label></span>
+                    <input type="text" class="form-control" id="txteditptelefono" placeholder="Ingrese el Telefono" required onkeypress="return solonumeros(event)" maxlength="10" />
+                    <span id="msjedittelefono"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <span><label><b>Email:</b></label></span>
+                    <input type="text" class="form-control" id="txteditpemail" placeholder="Ingrese el correo" required />
+                    <span id="msjeditemail"></span>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-8 ">
+                    <span><label><b>Direccion:</b></label></span>
+                    <input type="text" class="form-control" id="txteditpdireccion" placeholder="Ingrese la direccion" required />
+                    <span id="msjeditdireccion"></span>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-success " id="btneditar"> <i class=" fa fa-floppy-o"></i> Editar</button>
+                    <button type="button" class="btn btn-danger" id="btneditvolver"> <i class=" fa fa-reply"></i> Volver</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="~/Scripts/app/proveedores.js"></script>
+<script type="text/javascript" src="~/Scripts/js/validaciones.js"></script>
+

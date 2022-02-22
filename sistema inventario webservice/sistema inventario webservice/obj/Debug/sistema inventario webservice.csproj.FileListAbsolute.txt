@@ -1,0 +1,79 @@
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistema inventario webservice.dll.config
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistema inventario webservice.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistema inventario webservice.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\csc.exe
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\csc.exe.config
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\csc.rsp
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\csi.exe
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\csi.rsp
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\System.AppContext.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\System.Collections.Immutable.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\System.IO.FileSystem.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\System.Reflection.Metadata.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\vbc.exe
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\vbc.exe.config
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\vbc.rsp
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\VBCSCompiler.exe
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\roslyn\VBCSCompiler.exe.config
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\BAZ.GEN.Log4Dan.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.IdentityModel.Logging.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.IdentityModel.Tokens.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.Web.Infrastructure.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Newtonsoft.Json.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistemadefacturacion.datos.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistemadeinventario.entity.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Net.Http.Formatting.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Helpers.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Http.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Http.WebHost.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Mvc.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Razor.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Webpages.Deployment.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Webpages.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Webpages.Razor.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistemadefacturacion.datos.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\sistemadeinventario.entity.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.IdentityModel.Logging.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.IdentityModel.Tokens.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Razor.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Webpages.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Webpages.Deployment.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Webpages.Razor.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Helpers.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Mvc.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Newtonsoft.Json.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Net.Http.Formatting.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Http.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\System.Web.Http.WebHost.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Razor.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Webpages.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Webpages.Deployment.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Webpages.Razor.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Helpers.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Mvc.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Net.Http.Formatting.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Http.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\bin\es\System.Web.Http.WebHost.resources.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\obj\Debug\sistema inventario webservice.csprojAssemblyReference.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\obj\Debug\sistema inventario webservice.csproj.CoreCompileInputs.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\obj\Debug\sistema inventario webservice.csproj.CopyComplete
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\obj\Debug\sistema inventario webservice.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistema inventario webservice\obj\Debug\sistema inventario webservice.pdb

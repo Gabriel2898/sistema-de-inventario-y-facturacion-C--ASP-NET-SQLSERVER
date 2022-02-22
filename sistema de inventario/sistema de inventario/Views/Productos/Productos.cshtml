@@ -1,0 +1,450 @@
+﻿@model modelList
+@using sistema_de_inventario.Models;
+@{
+    ViewBag.Title = "Productos";
+}
+
+<br /><br /><br />
+<div class="panel panel-warning">
+    <div class="panel-heading"><b>Productos</b></div>
+    <div class="panel panel-default ">
+        <div class="panel-heading">
+            <button class="btn btn-default" id="btncatalogo"><img src="~/Content/img/imagenes/calendario.png" alt="Alternate Text" />Catálogo </button>
+            <button class="btn btn-default" id="btndepartamentos"><img src="~/Content/img/imagenes/departamento.png" alt="Alternate Text" />Departamentos </button>
+            <button class="btn btn-default" id="btnpromociones"><img src="~/Content/img/imagenes/estrella.png" alt="Alternate Text" />Promociones </button>
+            <button class="btn btn-default"><img src="~/Content/img/imagenes/expediente.png" alt="Alternate Text" />Importar </button>
+            <button class="btn btn-default"><img src="~/Content/img/imagenes/xls.png" alt="Alternate Text" />Exportar </button>
+        </div>
+        <div class="col-ms-12">
+            <center>
+                <h3 id="lblprin"></h3>
+            </center>
+        </div>
+    </div>
+    <br />
+    <div class="panel-body">
+        <div id="divcatalogo">
+            <span>Tipo Moneda:  <b>@Model.tmoneda.Moneda </b></span> <br />
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="txtbuscadorp" placeholder="Buscar Producto" />
+                </div>
+                <div class="col-md-4">
+                    <select class="form-control" id="sldepatamentosbuscar">
+                        <option value="0">- Todos departamentos -</option>
+                        @foreach (var item in Model.listDepart)
+                        {
+                            <option value="@item.iddepart">@item.depart</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-default" id="btnnewp"><img src="~/Content/img/imagenes/new.png" alt="Alternate Text" /> Nuevo </button>
+                    <button class="btn btn-default" id="btnModificar"><img src="~/Content/img/imagenes/lapiz.png" alt="Alternate Text" /> Modificar </button>
+                    <button class="btn btn-default" id="btneliminar"><img src="~/Content/img/imagenes/eli.png" alt="Alternate Text" />Eliminar </button>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <table class="table table-condensed table-bordered table-hover dt-reponsive tab">
+                    <thead>
+                        <tr>
+                            <th class="ocultar"></th>
+                            <th></th>
+                            <th>TIPO</th>
+                            <th>CODIGO</th>
+                            <th>DESCRIPCION PRODUCTO</th>
+                            <th>T. PRODUCTO</th>
+                            <th>DEPART.</th>
+                            <th>COSTO</th>
+                            <th>P. VENTA</th>
+                            <th>P. MAYOREO</th>
+                            <th>EXIST.</th>
+                            <th>F. VENCI</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bdlistprod">
+                        @foreach (var item in Model.listProduct)
+                        {
+                            <tr>
+                                <td class="ocultar" id="row_@item.row">@item.idproducto</td>
+                                <td><input type="checkbox" id="cbox_@item.row" /></td>
+                                <td>@item.tipo</td>
+                                <td>@item.codbarra</td>
+                                <td>@item.desc</td>
+                                <td>@item.tproduct</td>
+                                <td>@item.depart</td>
+                                <td>@item.pcosto</td>
+                                <td>@item.pventa</td>
+                                <td>@item.pmayoreo</td>
+                                @if (item.minexisten < @item.existen)
+                                {
+                                    <td style="color:#004501">@item.existen</td>
+
+                                }
+                                else
+                                {
+                                    if (item.existen == 0)
+                                    {
+
+                                        <td style="color:#ff0000">@item.existen</td>
+                                    }
+                                    else
+                                    {
+                                        if (item.existen >= item.existen)
+                                        {
+
+                                            <td style="color:#ff6a00">@item.existen</td>
+                                        }
+                                    }
+
+                                }
+                                <td>@item.fvenci</td>
+
+                                @if (item.status == 1)
+                                {
+                                    <td><span style="background:#004501; color:#fff">Activado</span></td>
+                                }
+                                else
+                                {
+                                    if (item.status == 0)
+                                    {
+                                        <td><span style="background:#ff0000; color:#fff">Desactivado</span></td>
+                                    }
+                                    else
+                                    {
+                                        if (item.status == 2)
+                                        {
+                                            <td><span style="background:#ff6a00; color:#fff">Producto Vencido</span></td>
+                                        }
+
+
+                                    }
+                                }
+
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="divnewproduct" style="display:none;">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <input type="radio" id="rdrbien" /><b> Bien  </b>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="rdrserv" /><b> Servicio    </b>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Código</span>
+                        <input type="text" class="form-control" placeholder="Código de barras" id="txtcodbarra" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <span class="input-group-addon">Descripción</span>
+                        <input type="text" class="form-control" placeholder="Descripcion" id="txtdescripcion" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-2">
+                    <span><b>Se vende:</b></span>
+                </div>
+                <div class="col-md-4">
+                    <input type="radio" id="rdrunca" /><b> Unidad/Caja  </b>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="rdrkigra" /><b> Kilos/Gramos    </b>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Precio  Costo</span>
+                        <input type="text" class="form-control" placeholder="0.00" id="txtpcosto" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon">  @Model.tmoneda.Moneda  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">Ganancia</span>
+                        <input type="number" class="form-control" id="txtganancia" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon">% </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span id="lblpvenser"></span> </span>
+                        <input type="text" class="form-control" placeholder="0.00" disabled id="txtpvenser" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon" id="">  @Model.tmoneda.Moneda  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Precio Mayoreo</span>
+                        <input type="text" class="form-control" placeholder="0.00" id="txtpmayoreo" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon">  @Model.tmoneda.Moneda </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon"> A partir de </span>
+                        <input type="number" class="form-control" placeholder="0.00" min="2" id="txtapartir" onkeypress="return solonumeros(event);" />
+                        <span class="input-group-addon"> @Model.tmoneda.Moneda  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Departamentos</span>
+                        <select class="form-control selectpicker" id="sldepartamento" style="width:230px;">
+                            <option value="0">- Seleccione un departamento -</option>
+                            @foreach (var item in Model.listDepart)
+                            {
+                                <option value="@item.iddepart">@item.depart</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Stock</span>
+                        <input type="number" class="form-control" id="txtstock" placeholder="0" onkeypress="return solonumeros(event);" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Stock Min</span>
+                        <input type="number" class="form-control" id="txtstockmin" placeholder="0" onkeypress="return solonumeros(event);" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Fecha Vencimiento</span>
+                        <input type="date" class="form-control" id="txtfvenc" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox" id="chknoaplica" /> No aplica
+                </div>
+
+            </div>
+            <div class="col-md-12">
+
+                <br /><br />
+                <div class="col-md-2">
+
+                    <button class="btn btn-default" id="btnguardar"><img src="~/Content/img/imagenes/guardar.png" alt="Alternate Text" />  Guardar </button>
+
+                </div>
+                <div class="col-md-2">
+
+                    <button class="btn btn-default" id="btnvolver"><img src="~/Content/img/imagenes/deshacer.png" alt="Alternate Text" />  Volver </button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="diveditproduct" style="display:none;">
+            <input type="hidden" id="idproductos"  />
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <input type="radio" id="editrdrbien" /><b> Bien  </b>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="editrdrserv" /><b> Servicio    </b>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Código</span>
+                        <input type="text" class="form-control" placeholder="Código de barras" id="edittxtcodbarra" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <span class="input-group-addon">Descripción</span>
+                        <input type="text" class="form-control" placeholder="Descripcion" id="edittxtdescripcion" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-2">
+                    <span><b>Se vende:</b></span>
+                </div>
+                <div class="col-md-4">
+                    <input type="radio" id="editrdrunca" /><b> Unidad/Caja  </b>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="editrdrkigra" /><b> Kilos/Gramos    </b>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Precio  Costo</span>
+                        <input type="text" class="form-control" placeholder="0.00" id="edittxtpcosto" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon">  @Model.tmoneda.Moneda  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">Ganancia</span>
+                        <input type="number" class="form-control" id="edittxtganancia" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon">% </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span id="editlblpvenser"></span> </span>
+                        <input type="text" class="form-control" placeholder="0.00" disabled id="edittxtpvenser" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon" id="">  @Model.tmoneda.Moneda  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Precio Mayoreo</span>
+                        <input type="text" class="form-control" placeholder="0.00" id="edittxtpmayoreo" onkeypress="return Decimal(this, event);" />
+                        <span class="input-group-addon">  @Model.tmoneda.Moneda </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon"> A partir de </span>
+                        <input type="number" class="form-control" placeholder="0.00" min="2" id="edittxtapartir" onkeypress="return solonumeros(event);" />
+                        <span class="input-group-addon"> @Model.tmoneda.Moneda  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Departamentos</span>
+                        <select class="form-control OneItem" id="editsldepartamento" style="width:230px;">
+                            <option id="obtsl"> </option>
+                            @foreach (var item in Model.listDepart)
+                            {
+                                <option value="@item.iddepart">@item.depart</option>
+                            }
+                        </select>
+                    </div>
+                    <input type="hidden" id="edittxtiddepartamentos" />
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Stock</span>
+                        <input type="number" class="form-control" id="edittxtstock" placeholder="0" onkeypress="return solonumeros(event);" />
+                    </div>
+                    <span id="lblmensaje"></span>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Stock Min</span>
+                        <input type="number" class="form-control" id="edittxtstockmin" placeholder="0" onkeypress="return solonumeros(event);" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Fecha Vencimiento</span>
+                        <input type="date" class="form-control" id="edittxtfvenc" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox" id="editchknoaplica" /> No aplica
+                </div>
+
+            </div>
+            <div class="col-md-12">
+
+                <br /><br />
+                <div class="col-md-2">
+
+                    <button class="btn btn-default" id="btneditar"><img src="~/Content/img/imagenes/guardar.png" alt="Alternate Text" />  Modificar </button>
+
+                </div>
+                <div class="col-md-2">
+
+                    <button class="btn btn-default" id="editbtnvolver"><img src="~/Content/img/imagenes/deshacer.png" alt="Alternate Text" />  Volver </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/app/productos.js"></script>
+<script type="text/javascript" src="~/Scripts/js/validaciones.js"></script>

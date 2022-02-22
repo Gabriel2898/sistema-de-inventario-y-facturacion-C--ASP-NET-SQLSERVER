@@ -1,0 +1,9 @@
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\bin\Debug\sistemadeinventario.clients.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\bin\Debug\sistemadeinventario.clients.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\bin\Debug\Newtonsoft.Json.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\bin\Debug\Newtonsoft.Json.xml
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\obj\Debug\sistemadeinventario.clients.csprojAssemblyReference.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\obj\Debug\sistemadeinventario.clients.csproj.CoreCompileInputs.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\obj\Debug\sistemadeinventario.clients.csproj.CopyComplete
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\obj\Debug\sistemadeinventario.clients.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema de inventario\sistemadeinventario.clients\obj\Debug\sistemadeinventario.clients.pdb

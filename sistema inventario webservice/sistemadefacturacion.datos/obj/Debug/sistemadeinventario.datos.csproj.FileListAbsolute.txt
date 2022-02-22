@@ -1,0 +1,9 @@
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\bin\Debug\sistemadefacturacion.datos.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\bin\Debug\sistemadefacturacion.datos.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\bin\Debug\sistemadeinventario.entity.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\bin\Debug\sistemadeinventario.entity.pdb
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\obj\Debug\sistemadeinventario.datos.csprojAssemblyReference.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\obj\Debug\sistemadeinventario.datos.csproj.CoreCompileInputs.cache
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\obj\Debug\sistemadeinventario.datos.csproj.CopyComplete
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\obj\Debug\sistemadefacturacion.datos.dll
+D:\trabajos visual\sistema de inventario y facturacion\sistema inventario webservice\sistemadefacturacion.datos\obj\Debug\sistemadefacturacion.datos.pdb
